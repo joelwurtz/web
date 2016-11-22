@@ -1,3 +1,11 @@
 admin_vote:
   path: /vote/{eventSlug}
   defaults: {_controller: AppBundle:Vote:admin}
+
+admin_company:
+  path: /association/membres/entreprises
+  defaults: {_controller: AppBundle:MemberShip:admin}
+
+void:
+  path: /void
+  defaults: {_controller: AppBundle:Legacy:void}

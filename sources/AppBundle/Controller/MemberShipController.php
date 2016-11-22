@@ -194,4 +194,10 @@ class MemberShipController extends SiteBaseController
 
         return $this->render(':site/company_membership:member_invitation.html.twig', ['company' => $company, 'form' => $userForm->createView()]);
     }
+
+    public function adminAction()
+    {
+        dump($this->getUser());
+        die;
+    }
 }
