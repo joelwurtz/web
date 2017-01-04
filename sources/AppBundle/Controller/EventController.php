@@ -39,4 +39,15 @@ class EventController extends EventBaseController
 
         return $this->render(':event:home.html.twig', ['event' => $event, 'talks' => $talks['talks'], 'votes' => $votes['votes']]);
     }
+
+    public function registrationAction($eventSlug)
+    {
+        $event = $this->checkEventSlug($eventSlug);
+        if ($event->getDateEndSales() < new \DateTime()) {
+            return $this->render(':event/registration:closed.html.twig', ['event' => $event]);
+        }
+
+
+        return $this->render(':event/registration:registration.html.twig', ['event' => $event]);
+    }
 }

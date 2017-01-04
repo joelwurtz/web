@@ -43,6 +43,6 @@ if ($action == 'lister') {
     if($liste===""){
 		afficherMessage('Les relances ont été effectuées.', 'index.php?page=relances');
 	}else{
-		afficherMessage('Toutes les relances n\'ont pas pu être effectuées.<br />'.$liste, 'index.php?page=relances', true);
+		afficherMessage("Toutes les relances n'ont pas pu être effectuées.\n".$liste, 'index.php?page=relances', true);
 	}
 }
